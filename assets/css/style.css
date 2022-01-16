@@ -70,6 +70,6 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-#test {
-  height: 100%;
+div {
+  color: #000000;
 }
