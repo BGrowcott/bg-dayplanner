@@ -28,62 +28,140 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container" id='timeblockContainer'>
+    <div class="container" id="timeblockContainer">
       <!-- Time blocks here -->
-      <div id='8' class="row align-items-center border border-primary">
-        <div class='col-1'>8am</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="8" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="8am">8am</span>
+          </div>
+          <input type="text" class="form-control" aria-label="8am time block" />
+        </div>
+        <div class="col-2">
+          <button id='button1' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='9' class="row align-items-center border border-primary">
-        <div class='col-1'>9am</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="9" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="9am">9am</span>
+          </div>
+          <input type="text" class="form-control" aria-label="9am time block" />
+        </div>
+        <div class="col-2">
+          <button id='button2' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='10' class="row align-items-center border border-primary">
-        <div class='col-1'>10am</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="10" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="10am">10am</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="10am time block"
+          />
+        </div>
+        <div class="col-2">
+          <button id='button3' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='11' class="row align-items-center border border-primary">
-        <div class='col-1'>11am</div>
-        <div id='test' class='col-9 textarea' contenteditable="true"> test</div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="11" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="11am">11am</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="11am time block"
+          />
+        </div>
+        <div class="col-2">
+          <button id='button4' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='12' class="row align-items-center border border-primary">
-        <div class='col-1'>12pm</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="12" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="12pm">12pm</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="12pm time block"
+          />
+        </div>
+        <div class="col-2">
+          <button id='button5' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='1' class="row align-items-center border border-primary">
-        <div class='col-1'>1pm</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="1" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="1pm">1pm</span>
+          </div>
+          <input type="text" class="form-control" aria-label="1pm time block" />
+        </div>
+        <div class="col-2">
+          <button id='button6' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='2' class="row align-items-center border border-primary">
-        <div class='col-1'>2pm</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="2" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="2pm">2pm</span>
+          </div>
+          <input type="text" class="form-control" aria-label="2pm time block" />
+        </div>
+        <div class="col-2">
+          <button id='button7' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='3' class="row align-items-center border border-primary">
-        <div class='col-1'>3pm</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="3" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="3pm">3pm</span>
+          </div>
+          <input type="text" class="form-control" aria-label="3pm time block" />
+        </div>
+        <div class="col-2">
+          <button id='button8' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='4' class="row align-items-center border border-primary">
-        <div class='col-1'>4pm</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="4" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="4pm">4pm</span>
+          </div>
+          <input type="text" class="form-control" aria-label="4pm time block" />
+        </div>
+        <div class="col-2">
+          <button id='button9' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='5' class="row align-items-center border border-primary">
-        <div class='col-1'>5pm</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="5" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="5pm">5pm</span>
+          </div>
+          <input type="text" class="form-control" aria-label="5pm time block" />
+        </div>
+        <div class="col-2">
+          <button id='button10' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
-      <div id='6' class="row align-items-center border border-primary">
-        <div class='col-1'>6pm</div>
-        <div class='col-9'></div>
-        <div class='col-2'><button type="button" class="btn btn-success">Save</button></div>
+      <div id="6" class="row align-items-center border border-primary">
+        <div class="input-group input-group-lg col-10">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="6pm">6pm</span>
+          </div>
+          <input type="text" class="form-control" aria-label="6pm time block" />
+        </div>
+        <div class="col-2">
+          <button id='button11' type="button" class="btn btn-success">Save</button>
+        </div>
       </div>
     </div>
 
