@@ -24,6 +24,7 @@ setInterval(timeKeeper, 1000);
 //Change time block colors to represent past/present/future
 let currentHour = moment().format("H");
 function pastPresentFuture() {
+  currentHour = moment().format("H");
   for (i = 0; i < hoursArray.length; i++) {
     if (currentHour == i + 8) {
       hoursArray[i].addClass("present");
@@ -42,9 +43,9 @@ setInterval(pastPresentFuture, 60000);
 //saving user input to local storage
 let inputArray = $("input");
 let inputValues = [];
-function saveInput() {
-  // buttons.addClass('btn-success')
-  // buttons.removeClass('btn-outline-success')
+function saveInput(e) {
+  //save button disappears on save
+  e.target.style.display = "none";
   inputValues = [];
   for (i = 0; i < inputArray.length; i++) {
     inputValues.push(inputArray[i].value);
@@ -66,5 +67,34 @@ function renderInputs() {
 //save user inputs on save buttons
 const buttons = $("button");
 for (let button of buttons) {
+  button.style.display = "none";
   button.addEventListener("click", saveInput);
 }
+
+// save button appears when input is changed
+for (i = 0; i < inputArray.length; i++) {
+  inputArray[i].addEventListener("input", function (e) {
+    e.target.parentElement.parentElement.lastElementChild.lastElementChild.style.display =
+      "block";
+  });
+}
+
+// inputArray[0].addEventListener("input", function () {
+//   $(`#button${1}`).removeClass("btn-success");
+//   $(`#button${1}`).addClass("btn-outline-success");
+// });
+
+// inputArray[1].addEventListener("input", function () {
+//   $(`#button${2}`).removeClass("btn-success");
+//   $(`#button${2}`).addClass("btn-outline-success");
+// });
+
+// inputArray[2].addEventListener("input", function () {
+//   $(`#button${3}`).removeClass("btn-success");
+//   $(`#button${3}`).addClass("btn-outline-success");
+// });
+
+// inputArray[3].addEventListener("input", function () {
+//     $(`#button${4}`).removeClass("btn-success");
+//     $(`#button${4}`).addClass("btn-outline-success");
+//   });
