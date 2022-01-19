@@ -74,8 +74,9 @@ for (let button of buttons) {
 // save button appears when input is changed
 for (i = 0; i < inputArray.length; i++) {
   inputArray[i].addEventListener("input", function (e) {
-    e.target.parentElement.parentElement.lastElementChild.lastElementChild.style.display =
-      "block";
+    // e.target.parentElement.parentElement.lastElementChild.lastElementChild.style.display =
+    //   "block";
+    console.log(e.target.parent())
   });
 }
 
