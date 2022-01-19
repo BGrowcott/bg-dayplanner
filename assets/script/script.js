@@ -45,7 +45,7 @@ let inputArray = $("input");
 let inputValues = [];
 function saveInput(e) {
   //save button disappears on save
-  e.target.style.display = "none";
+  $(e.target).css("display", "none");
   inputValues = [];
   for (i = 0; i < inputArray.length; i++) {
     inputValues.push(inputArray[i].value);
@@ -67,35 +67,19 @@ function renderInputs() {
 //save user inputs on save buttons
 const buttons = $("button");
 for (let button of buttons) {
-  button.style.display = "none";
-  button.addEventListener("click", saveInput);
+  $(button).click(saveInput);
 }
 
 // save button appears when input is changed
 for (i = 0; i < inputArray.length; i++) {
-  inputArray[i].addEventListener("input", function (e) {
-    // e.target.parentElement.parentElement.lastElementChild.lastElementChild.style.display =
-    //   "block";
-    console.log(e.target.parent())
+  $(inputArray[i]).on("input", function (e) {
+    $(e.target)
+      .parent()
+      .parent()
+      .children()
+      .eq(1)
+      .children()
+      .eq(0)
+      .css("display", "block");
   });
 }
-
-// inputArray[0].addEventListener("input", function () {
-//   $(`#button${1}`).removeClass("btn-success");
-//   $(`#button${1}`).addClass("btn-outline-success");
-// });
-
-// inputArray[1].addEventListener("input", function () {
-//   $(`#button${2}`).removeClass("btn-success");
-//   $(`#button${2}`).addClass("btn-outline-success");
-// });
-
-// inputArray[2].addEventListener("input", function () {
-//   $(`#button${3}`).removeClass("btn-success");
-//   $(`#button${3}`).addClass("btn-outline-success");
-// });
-
-// inputArray[3].addEventListener("input", function () {
-//     $(`#button${4}`).removeClass("btn-success");
-//     $(`#button${4}`).addClass("btn-outline-success");
-//   });
