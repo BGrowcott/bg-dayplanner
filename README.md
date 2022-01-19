@@ -16,4 +16,4 @@ Colours will update automatically as the day goes on.
 
 ## Link to deployed application
 
-https://github.com/BGrowcott/bg-dayplanner
+https://bgrowcott.github.io/bg-dayplanner/
