@@ -47,7 +47,7 @@ function saveInput(e) {
   //save button disappears on save
   $(e.target).css("display", "none");
   inputValues = [];
-  for (i = 0; i < inputArray.length; i++) {
+  for (let i = 0; i < inputArray.length; i++) {
     inputValues.push(inputArray[i].value);
     localStorage.setItem("timeInputs", JSON.stringify(inputValues));
   }
@@ -59,7 +59,7 @@ if (localStorage.getItem("timeInputs") == null) {
 }
 renderInputs();
 function renderInputs() {
-  for (i = 0; i < inputArray.length; i++) {
+  for (let i = 0; i < inputArray.length; i++) {
     inputArray[i].value = JSON.parse(localStorage.getItem("timeInputs"))[i];
   }
 }
@@ -71,7 +71,7 @@ for (let button of buttons) {
 }
 
 // save button appears when input is changed
-for (i = 0; i < inputArray.length; i++) {
+for (let i = 0; i < inputArray.length; i++) {
   $(inputArray[i]).on("input", function (e) {
     $(e.target)
       .parent()
