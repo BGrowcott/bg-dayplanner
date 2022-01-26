@@ -44,8 +44,7 @@ setInterval(pastPresentFuture, 60000);
 let inputArray = $("input");
 let inputValues = [];
 function saveInput(e) {
-  //save button disappears on save
-  $(e.target).css("display", "none");
+  $(e.target).css("display", "none"); //save button disappears on save
   inputValues = [];
   for (let i = 0; i < inputArray.length; i++) {
     inputValues.push(inputArray[i].value);
@@ -55,7 +54,11 @@ function saveInput(e) {
 
 // putting localStorage into page
 if (localStorage.getItem("timeInputs") == null) {
-  saveInput();
+  inputValues = [];
+  for (let i = 0; i < inputArray.length; i++) {
+    inputValues.push(inputArray[i].value);
+    localStorage.setItem("timeInputs", JSON.stringify(inputValues));
+  }
 }
 renderInputs();
 function renderInputs() {
